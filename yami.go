@@ -46,7 +46,8 @@ func GetMediaInfoContext(ctx context.Context, filePath string, arg ...string) (m
 		binPath,
 		Args...,
 	)
-	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+	// comment this only windows line.
+	//cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 
 	var outputBuf bytes.Buffer
 	cmd.Stdout = &outputBuf
